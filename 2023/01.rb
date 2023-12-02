@@ -1,5 +1,7 @@
 data = File.readlines('01.txt', chomp: true)
 
+# part 1
+
 total = data.map do |line|
   first = line.chars.find { |char| char.match(/\d/) }.to_i
   last = line.chars.reverse.find { |char| char.match(/\d/) }.to_i
@@ -7,6 +9,7 @@ total = data.map do |line|
 end.sum
 p total
 
+# part 2
 
 total = data.map do |line|
   nums = { "one" => 1, "two" => 2, "three" => 3, "four" => 4, "five" => 5, "six" => 6, "seven" => 7, "eight" => 8, "nine" => 9 }
